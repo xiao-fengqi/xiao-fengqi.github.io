@@ -27,11 +27,11 @@ redirect_from:
 
 **<font face="Times New Roman" id="Research" color=black size=4>Research Interests </font>**
 
-- <font face="Times New Roman" color=black size=3> **Underwater intelligent information processing:**</font>
+- **<font face="Times New Roman" color=black size=3>Underwater intelligent information processing:</font>**
   - <font face="Times New Roman" color=black size=3>Underwater optical image processing </font>
     - <font face="Times New Roman" color=black size=3>Underwater image enhancement and restoration, underwater scene perception and understanding.</font>
   - <font face="Times New Roman" color=black size=3>Sonar image processing</font>
-    - <font face="Times New Roman" color=black size=3>Sonar image despeckling, object detection, recognition and tracking</font>.
+    - <font face="Times New Roman" color=black size=3>Sonar image despeckling, object detection, recognition and tracking.</font>
 
 ------
 
