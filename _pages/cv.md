@@ -56,8 +56,8 @@ redirect_from:
   - <font face="Times New Roman" color=black size=3> IEEE Journal of Oceanic Engineering (JOE). </font>
   - <font face="Times New Roman" color=black size=3> IEEE Signal Processing Letters (SPL). </font>
   - <font face="Times New Roman" color=black size=3> International Journal of Robotics Research (IJRR). </font>
-  - <font face="Times New Roman" color=black size=3> Signal, Image and Video Processing**. </font>
-  - <font face="Times New Roman" color=black size=3> Sensors**.</font>
+  - <font face="Times New Roman" color=black size=3> Signal, Image and Video Processing. </font>
+  - <font face="Times New Roman" color=black size=3> Sensors.</font>
 
 - <font face="Times New Roman" color=black size=3>The Reviewer of Conferences:</font>
 
