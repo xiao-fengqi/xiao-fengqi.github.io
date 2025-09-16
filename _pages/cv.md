@@ -69,11 +69,5 @@ redirect_from:
 
 
 
-<div align= right > <a href= #XFQ>[TOP↑]</a > </div>
-
-
-
-
-
 
 
