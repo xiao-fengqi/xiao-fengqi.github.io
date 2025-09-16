@@ -7,11 +7,6 @@ redirect_from:
   - /resume
 ---
 
-{% include base_path %}
-
-
- <img align="right" src="/Images/Xiao.jpeg"  style="zoom:45%;" /> 
-
  <font id="XFQ" face="楷体" color=black size=8>**肖丰奇**</font> 
  <font id="XFQ" face="Times New Roman" color=black size=5>  Fengqi Xiao</font> 
 
@@ -30,8 +25,7 @@ redirect_from:
 
 ------
 
-
-​					[[Education](#education)]  [[Research Interests](#Research)]   [[Publications](#publications)]   [[Patents](#patents)]   [[Honors and Awards](#honors)]   [[Professional Service](#professional)]
+[[Education](#education)]  [[Research Interests](#Research)]   [[Publications](#publications)]   [[Patents](#patents)]   [[Honors and Awards](#honors)]   [[Professional Service](#professional)]
 
 ------
 
