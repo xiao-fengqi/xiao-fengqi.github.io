@@ -14,7 +14,7 @@ redirect_from:
 
 - <font face="Times New Roman" color=black size=3>2024.08 - now，Postdoc，Tsinghua University，Shenzhen International Graduate School (SIGS), Institute for Ocean Engineering (iOE). </font>
 
-  <font face="Times New Roman" color=black size=3>In cooperation with Prof. [Juntian Qu](https://www.sigs.tsinghua.edu.cn/qjt/). </font>
+  In cooperation with Prof. [Juntian Qu](https://www.sigs.tsinghua.edu.cn/qjt/). 
 
 ------
 
