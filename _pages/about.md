@@ -12,5 +12,18 @@ I am currently a postdoctoral researcher at the Tsinghua University Shenzhen Int
 
 News
 ======
-...
+<font face="Times New Roman" id="education" color=\#00008B size=4> ★**News**</font> 
+:star:***<font face="Times New Roman" color=black size=3>[2025.07] One paper has been accepted by IEEE Transactions on Robotics (TRO)***</font>.
+
+:star:***<font face="Times New Roman" color=black size=3>[2025.07] One paper has been accepted by IEEE Robotics and Automation Letters (RA-L)***</font>.
+
+:star:***<font face="Times New Roman" color=black size=3>[2025.04] One paper has been accepted by IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)***</font>.
+
+:star:***<font face="Times New Roman" color=black size=3>[2025.01] One paper has been accepted by IEEE Journal of Oceanic Engineering (JOE)***</font>.
+
+:star:***<font face="Times New Roman" color=black size=3>[2024.10] One paper has been accepted by IEEE Transactions on Geoscience and Remote Sensing (TGRS)***</font>.
+
+:star:***<font face="Times New Roman" color=black size=3>[2024.10] One paper has been accepted by IEEE Journal of Oceanic Engineering (JOE)***</font>.
+
+:star:***<font face="Times New Roman" color=black size=3>[2023.01] One paper has been accepted by IEEE Journal of Oceanic Engineering (JOE)***</font>.
 
