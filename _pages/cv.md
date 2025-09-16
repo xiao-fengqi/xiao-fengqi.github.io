@@ -7,21 +7,13 @@ redirect_from:
   - /resume
 ---
 
-**<font id="XFQ" face="楷体" color=black size=8>肖丰奇**</font> 
+<font id="XFQ" face="楷体" color=black size=8>肖丰奇</font> 
 
 <font id="XFQ" face="Times New Roman" color=black size=5>  Fengqi Xiao</font> 
 
- <font face="宋体" color=black size=3>A Postdoc at Tsinghua Shenzhen International Graduate School</font>. 
-
- [[Github]](https://github.com/Xiao-Fengqi) [[Google Scholar]](https://scholar.google.com/citations?user=rlyLiv8AAAAJ&hl=en)
+<font face="宋体" color=black size=3>A Postdoc at Tsinghua Shenzhen International Graduate School</font>. 
 
  <font face="Times New Roman" color=black size=3>Email: xiaofengqi@sz.tsinghua.edu.cn; uacxiaofengqi@stu.xmu.edu.cn</font>   
-
-
-------
-
-[[Education](#education)]  [[Research Interests](#Research)]   [[Publications](#publications)]   [[Patents](#patents)]   [[Honors and Awards](#honors)]   [[Professional Service](#professional)]
-
 
 ------
 
