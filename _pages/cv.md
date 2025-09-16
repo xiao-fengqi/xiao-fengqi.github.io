@@ -10,7 +10,7 @@ redirect_from:
 
 ------
 
-<font face="Times New Roman" id="education" color=\#00008B size=4> Work Experience </font> 
+**<font face="Times New Roman" id="education" color=black size=4> Work Experience </font> **
 
 - <font face="Times New Roman" color=black size=3>2024.08 - now，Postdoc，Tsinghua University，Shenzhen International Graduate School (SIGS), Institute for Ocean Engineering (iOE). </font>
 
@@ -18,14 +18,14 @@ redirect_from:
 
 ------
 
-<font face="Times New Roman" id="education" color=\#00008B size=4> Education Experience </font> 
+**<font face="Times New Roman" id="education" color=black size=4> Education Experience </font> **
 
 * <font face="Times New Roman" color=black size=3>2017.09 - 2024.06，PhD，Xiamen University，School of Information，<br />[Key Laboratory of Underwater Acoustic Communication and Marine Information Technology, Ministry of Education, Xiamen University](https://uac.xmu.edu.cn/). Supervisor：Prof. [En Cheng](https://informatics.xmu.edu.cn/info/1021/24599.htm)，Prof. [Fei Yuan](https://informatics.xmu.edu.cn/info/1021/24079.htm). </font>
 * <font face="Times New Roman" color=black size=3>2012.09 - 2016.06，B.S，Ocean University of China，School of Information Science and Technology.</font>
 
 ------
 
-<font face="Times New Roman" id="Research" color=\#00008B size=4> ★Research Interests </font> 
+**<font face="Times New Roman" id="Research" color=black size=4> ★Research Interests </font> **
 
 - <font face="Times New Roman" color=black size=3> **Underwater intelligent information processing:**</font>
   - <font face="Times New Roman" color=black size=3>Underwater optical image processing </font>
@@ -35,7 +35,7 @@ redirect_from:
 
 ------
 
-<font face="Times New Roman" id="honors" color=\#00008B size=4> Honors and Awards </font> 
+**<font face="Times New Roman" id="honors" color=black size=4> Honors and Awards </font> **
 
 1. <font face="微软雅黑" color=black size=3>第十四届“兆易创新杯”中国研究生电子设计竞赛，全国二等奖（2019）</font>
 
@@ -47,7 +47,7 @@ redirect_from:
 
 ------
 
-<font face="Times New Roman" id="professional" color=\#00008B size=4>Services </font> 
+**<font face="Times New Roman" id="professional" color=black size=4>Services </font>** 
 
 - <font face="Times New Roman" color=black size=3>The Reviewer of Journals:</font>
 
