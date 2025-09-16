@@ -16,12 +16,6 @@ redirect_from:
 
  <font face="Times New Roman" color=black size=3>Email: xiaofengqi@sz.tsinghua.edu.cn; uacxiaofengqi@stu.xmu.edu.cn</font>   
 
-------
-
-<img src="/Images/Xiamen baicheng-2.jpg" /> 
-
-<center><font face="Comic Sans MS" color=black size=4>Baicheng Sandy Beach, Xiamen</font>
-
 
 ------
 
@@ -219,74 +213,6 @@ redirect_from:
 
   - <font face="Times New Roman" color=black size=3>**The IEEE International Conference on Automation Science and Engineering (CASE)**.</font>
 
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-------
-
-<font face="Times New Roman" id="professional" color=\#00008B size=4>**My Album**</font> 
-
-<img src="/Images/Xiamen University.jpg" /> 
-
-<center><font face="Comic Sans MS" color=black size=4>Xiamen University, 2023, 05</font>
-
-
-<img src="/Images/dananmen.jpg" /> 
-
-<center><font face="Comic Sans MS" color=black size=4>Xiamen University, 2023, 06</font>
-
-
-<img src="/Images/shuiping.jpg" /> 
-
-<center><font face="Comic Sans MS" color=black size=4>Aquarius, 2023, 12</font>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ------
@@ -294,14 +220,6 @@ redirect_from:
 <font face="Times New Roman" id="professional" color=black size=4>Visitor Statistics:</font>
 
 <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=M-Rnztz2mrr0q4hNj7wftMkx1JDn2cQibvB_Sh78CXA&cl=ffffff&w=a"></script>
-
-
-
-
-
-
-
-
 
 
 
