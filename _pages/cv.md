@@ -1,599 +1,314 @@
-<!doctype html>
-<html>
-<head>
-<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-
-<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
-.mac-os-11 { --title-bar-height:28px; }
-html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
-iframe { margin: auto; }
-a.url { word-break: break-all; }
-a:active, a:hover { outline: 0px; }
-.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
-#write.first-line-indent p { text-indent: 2em; }
-#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
-#write.first-line-indent li { margin-left: 2em; }
-.for-image #write { padding-left: 8px; padding-right: 8px; }
-body.typora-export { padding-left: 30px; padding-right: 30px; }
-.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
-.typora-export .task-list-item input { pointer-events: none; }
-@media screen and (max-width: 500px) {
-  body.typora-export { padding-left: 0px; padding-right: 0px; }
-  #write { padding-left: 20px; padding-right: 20px; }
-  .CodeMirror-sizer { margin-left: 0px !important; }
-  .CodeMirror-gutters { display: none !important; }
-}
-#write li > figure:last-child { margin-bottom: 0.5rem; }
-#write ol, #write ul { position: relative; }
-img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
-button, input, select, textarea { color: inherit; font: inherit; }
-input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
-*, ::after, ::before { box-sizing: border-box; }
-#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
-#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
-p { line-height: inherit; }
-h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
-p { orphans: 4; }
-h1 { font-size: 2rem; }
-h2 { font-size: 1.8rem; }
-h3 { font-size: 1.6rem; }
-h4 { font-size: 1.4rem; }
-h5 { font-size: 1.2rem; }
-h6 { font-size: 1rem; }
-.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
-.hidden { display: none; }
-.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
-a { cursor: pointer; }
-sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
-sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
-#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
-figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
-figure > table { margin: 0px; }
-tr { break-inside: avoid; break-after: auto; }
-thead { display: table-header-group; }
-table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
-table.md-table td { min-width: 32px; }
-.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
-.CodeMirror-linenumber { user-select: none; }
-.CodeMirror { text-align: left; }
-.CodeMirror-placeholder { opacity: 0.3; }
-.CodeMirror pre { padding: 0px 4px; }
-.CodeMirror-lines { padding: 0px; }
-div.hr:focus { cursor: none; }
-#write pre { white-space: pre-wrap; }
-#write.fences-no-line-wrapping pre { white-space: pre; }
-#write pre.ty-contain-cm { white-space: normal; }
-.CodeMirror-gutters { margin-right: 4px; }
-.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
-.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
-#write .md-fences.mock-cm { white-space: pre-wrap; }
-.md-fences.md-fences-with-lineno { padding-left: 0px; }
-#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
-.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
-.CodeMirror-line, twitterwidget { break-inside: avoid; }
-.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
-.footnotes + .footnotes { margin-top: 0px; }
-.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
-li div { padding-top: 0px; }
-blockquote { margin: 1rem 0px; }
-li .mathjax-block, li p { margin: 0.5rem 0px; }
-li blockquote { margin: 1rem 0px; }
-li { margin: 0px; position: relative; }
-blockquote > :last-child { margin-bottom: 0px; }
-blockquote > :first-child, li > :first-child { margin-top: 0px; }
-.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
-#write .footnote-line { white-space: pre-wrap; }
-@media print {
-  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
-  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
-  .typora-export * { -webkit-print-color-adjust: exact; }
-  .typora-export #write { break-after: avoid; }
-  .typora-export #write::after { height: 0px; }
-  .is-mac table { break-inside: avoid; }
-  .typora-export-show-outline .typora-export-sidebar { display: none; }
-}
-.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
-a img, img a { cursor: pointer; }
-pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
-p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
-#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
-p > .md-image:only-child { display: inline-block; width: 100%; }
-#write .MathJax_Display { margin: 0.8em 0px 0px; }
-.md-math-block { width: 100%; }
-.md-math-block:not(:empty)::after { display: none; }
-.MathJax_ref { fill: currentcolor; }
-[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
-.md-task-list-item { position: relative; list-style-type: none; }
-.task-list-item.md-task-list-item { padding-left: 0px; }
-.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
-.math { font-size: 1rem; }
-.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
-.md-toc-content { position: relative; margin-left: 0px; }
-.md-toc-content::after, .md-toc::after { display: none; }
-.md-toc-item { display: block; color: rgb(65, 131, 196); }
-.md-toc-item a { text-decoration: none; }
-.md-toc-inner:hover { text-decoration: underline; }
-.md-toc-inner { display: inline-block; cursor: pointer; }
-.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
-.md-toc-h2 .md-toc-inner { margin-left: 2em; }
-.md-toc-h3 .md-toc-inner { margin-left: 4em; }
-.md-toc-h4 .md-toc-inner { margin-left: 6em; }
-.md-toc-h5 .md-toc-inner { margin-left: 8em; }
-.md-toc-h6 .md-toc-inner { margin-left: 10em; }
-@media screen and (max-width: 48em) {
-  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
-  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
-  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
-  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
-}
-a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
-.footnote-line a:not(.reversefootnote) { color: inherit; }
-.md-attr { display: none; }
-.md-fn-count::after { content: "."; }
-code, pre, samp, tt { font-family: var(--monospace); }
-kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
-.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
-code { text-align: left; vertical-align: initial; }
-a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
-.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
-.md-diagram-panel > svg { max-width: 100%; }
-[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
-[lang="mermaid"] .node text { font-size: 1rem; }
-table tr th { border-bottom: 0px; }
-video { max-width: 100%; display: block; margin: 0px auto; }
-iframe { max-width: 100%; width: 100%; border: none; }
-.highlight td, .highlight tr { border: 0px; }
-mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
-.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
-.md-expand mark .md-meta { opacity: 0.3 !important; }
-mark .md-meta { color: rgb(0, 0, 0); }
-@media print {
-  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
-}
-.md-diagram-panel .messageText { stroke: none !important; }
-.md-diagram-panel .start-state { fill: var(--node-fill); }
-.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
-.md-fences.md-fences-math { font-size: 1em; }
-.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
-.md-fences-advanced:not(.md-focus) { background: inherit; }
-.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
-.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
-.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
-.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
-@media screen and (max-width: 1024px) {
-  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
-}
-@media screen and (max-width: 800px) {
-  .typora-export-sidebar { display: none; }
-}
-.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
-.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
-.outline-content strong { font-weight: 400; }
-.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
-.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
-.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
-.outline-expander:hover::before { content: ""; }
-.outline-h1 > .outline-item { padding-left: 0px; }
-.outline-h2 > .outline-item { padding-left: 1em; }
-.outline-h3 > .outline-item { padding-left: 2em; }
-.outline-h4 > .outline-item { padding-left: 3em; }
-.outline-h5 > .outline-item { padding-left: 4em; }
-.outline-h6 > .outline-item { padding-left: 5em; }
-.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
-.outline-label:hover { text-decoration: underline; }
-.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
-.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
-.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
-.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
-.outline-children { display: none; }
-.info-panel-tab-wrapper { display: none; }
-.outline-item-open > .outline-children { display: block; }
-.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
-.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
-.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
-.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
-.typora-export-collapse-outline .outline-children { display: none; }
-.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
-.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
-.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
-.md-inline-math-container mjx-container { zoom: 0.95; }
-
-
-:root {
-    --side-bar-bg-color: #fafafa;
-    --control-text-color: #777;
-}
-
-@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
-
-/* open-sans-regular - latin-ext_latin */
-  /* open-sans-italic - latin-ext_latin */
-    /* open-sans-700 - latin-ext_latin */
-    /* open-sans-700italic - latin-ext_latin */
-  html {
-    font-size: 16px;
-    -webkit-font-smoothing: antialiased;
-}
-
-body {
-    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
-    color: rgb(51, 51, 51);
-    line-height: 1.6;
-}
-
-#write {
-    max-width: 860px;
-  	margin: 0 auto;
-  	padding: 30px;
-    padding-bottom: 100px;
-}
-
-@media only screen and (min-width: 1400px) {
-	#write {
-		max-width: 1024px;
-	}
-}
-
-@media only screen and (min-width: 1800px) {
-	#write {
-		max-width: 1200px;
-	}
-}
-
-#write > ul:first-child,
-#write > ol:first-child{
-    margin-top: 30px;
-}
-
-a {
-    color: #4183C4;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    position: relative;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-    line-height: 1.4;
-    cursor: text;
-}
-h1:hover a.anchor,
-h2:hover a.anchor,
-h3:hover a.anchor,
-h4:hover a.anchor,
-h5:hover a.anchor,
-h6:hover a.anchor {
-    text-decoration: none;
-}
-h1 tt,
-h1 code {
-    font-size: inherit;
-}
-h2 tt,
-h2 code {
-    font-size: inherit;
-}
-h3 tt,
-h3 code {
-    font-size: inherit;
-}
-h4 tt,
-h4 code {
-    font-size: inherit;
-}
-h5 tt,
-h5 code {
-    font-size: inherit;
-}
-h6 tt,
-h6 code {
-    font-size: inherit;
-}
-h1 {
-    font-size: 2.25em;
-    line-height: 1.2;
-    border-bottom: 1px solid #eee;
-}
-h2 {
-    font-size: 1.75em;
-    line-height: 1.225;
-    border-bottom: 1px solid #eee;
-}
-
-/*@media print {
-    .typora-export h1,
-    .typora-export h2 {
-        border-bottom: none;
-        padding-bottom: initial;
-    }
-
-    .typora-export h1::after,
-    .typora-export h2::after {
-        content: "";
-        display: block;
-        height: 100px;
-        margin-top: -96px;
-        border-top: 1px solid #eee;
-    }
-}*/
-
-h3 {
-    font-size: 1.5em;
-    line-height: 1.43;
-}
-h4 {
-    font-size: 1.25em;
-}
-h5 {
-    font-size: 1em;
-}
-h6 {
-   font-size: 1em;
-    color: #777;
-}
-p,
-blockquote,
-ul,
-ol,
-dl,
-table{
-    margin: 0.8em 0;
-}
-li>ol,
-li>ul {
-    margin: 0 0;
-}
-hr {
-    height: 2px;
-    padding: 0;
-    margin: 16px 0;
-    background-color: #e7e7e7;
-    border: 0 none;
-    overflow: hidden;
-    box-sizing: content-box;
-}
-
-li p.first {
-    display: inline-block;
-}
-ul,
-ol {
-    padding-left: 30px;
-}
-ul:first-child,
-ol:first-child {
-    margin-top: 0;
-}
-ul:last-child,
-ol:last-child {
-    margin-bottom: 0;
-}
-blockquote {
-    border-left: 4px solid #dfe2e5;
-    padding: 0 15px;
-    color: #777777;
-}
-blockquote blockquote {
-    padding-right: 0;
-}
-table {
-    padding: 0;
-    word-break: initial;
-}
-table tr {
-    border: 1px solid #dfe2e5;
-    margin: 0;
-    padding: 0;
-}
-table tr:nth-child(2n),
-thead {
-    background-color: #f8f8f8;
-}
-table th {
-    font-weight: bold;
-    border: 1px solid #dfe2e5;
-    border-bottom: 0;
-    margin: 0;
-    padding: 6px 13px;
-}
-table td {
-    border: 1px solid #dfe2e5;
-    margin: 0;
-    padding: 6px 13px;
-}
-table th:first-child,
-table td:first-child {
-    margin-top: 0;
-}
-table th:last-child,
-table td:last-child {
-    margin-bottom: 0;
-}
-
-.CodeMirror-lines {
-    padding-left: 4px;
-}
-
-.code-tooltip {
-    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
-    border-top: 1px solid #eef2f2;
-}
-
-.md-fences,
-code,
-tt {
-    border: 1px solid #e7eaed;
-    background-color: #f8f8f8;
-    border-radius: 3px;
-    padding: 0;
-    padding: 2px 4px 0px 4px;
-    font-size: 0.9em;
-}
-
-code {
-    background-color: #f3f4f4;
-    padding: 0 2px 0 2px;
-}
-
-.md-fences {
-    margin-bottom: 15px;
-    margin-top: 15px;
-    padding-top: 8px;
-    padding-bottom: 6px;
-}
-
-
-.md-task-list-item > input {
-  margin-left: -1.3em;
-}
-
-@media print {
-    html {
-        font-size: 13px;
-    }
-    table,
-    pre {
-        page-break-inside: avoid;
-    }
-    pre {
-        word-wrap: break-word;
-    }
-}
-
-.md-fences {
-	background-color: #f8f8f8;
-}
-#write pre.md-meta-block {
-	padding: 1rem;
-    font-size: 85%;
-    line-height: 1.45;
-    background-color: #f7f7f7;
-    border: 0;
-    border-radius: 3px;
-    color: #777777;
-    margin-top: 0 !important;
-}
-
-.mathjax-block>.code-tooltip {
-	bottom: .375rem;
-}
-
-.md-mathjax-midline {
-    background: #fafafa;
-}
-
-#write>h3.md-focus:before{
-	left: -1.5625rem;
-	top: .375rem;
-}
-#write>h4.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-#write>h5.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-#write>h6.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-.md-image>.md-meta {
-    /*border: 1px solid #ddd;*/
-    border-radius: 3px;
-    padding: 2px 0px 0px 4px;
-    font-size: 0.9em;
-    color: inherit;
-}
-
-.md-tag {
-    color: #a7a7a7;
-    opacity: 1;
-}
-
-.md-toc { 
-    margin-top:20px;
-    padding-bottom:20px;
-}
-
-.sidebar-tabs {
-    border-bottom: none;
-}
-
-#typora-quick-open {
-    border: 1px solid #ddd;
-    background-color: #f8f8f8;
-}
-
-#typora-quick-open-item {
-    background-color: #FAFAFA;
-    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
-    border-style: solid;
-    border-width: 1px;
-}
-
-/** focus mode */
-.on-focus-mode blockquote {
-    border-left-color: rgba(85, 85, 85, 0.12);
-}
-
-header, .context-menu, .megamenu-content, footer{
-    font-family: "Segoe UI", "Arial", sans-serif;
-}
-
-.file-node-content:hover .file-node-icon,
-.file-node-content:hover .file-node-open-state{
-    visibility: visible;
-}
-
-.mac-seamless-mode #typora-sidebar {
-    background-color: #fafafa;
-    background-color: var(--side-bar-bg-color);
-}
-
-.md-lang {
-    color: #b4654d;
-}
-
-/*.html-for-mac {
-    --item-hover-bg-color: #E6F0FE;
-}*/
-
-#md-notification .btn {
-    border: 0;
-}
-
-.dropdown-menu .divider {
-    border-color: #e5e5e5;
-    opacity: 0.4;
-}
-
-.ty-preferences .window-content {
-    background-color: #fafafa;
-}
-
-.ty-preferences .nav-group-item.active {
-    color: white;
-    background: #999;
-}
-
-.menu-item-container a.menu-style-btn {
-    background-color: #f5f8fa;
-    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
-}
 
 
 
-</style><title>homepage-xiaofengqi</title>
-</head>
-<body class='typora-export os-windows'><div class='typora-export-content'>
-<div id='write'  class=''><p><span> </span><img align="right" src="/Images/Xiao.jpeg"  style="zoom:45%;" /><span> </span></p><p><font id="XFQ" face="楷体" color=black size=8><strong><span>肖丰奇</span></strong></font><span> </span>
-<span> </span><font id="XFQ" face="Times New Roman" color=black size=5><span>  Fengqi Xiao</span></font><span> </span></p><p><span> </span><font face="宋体" color=black size=3><span>A Postdoc at Tsinghua Shenzhen International Graduate School</span></font><span>. </span></p><p><span> </span><a href='https://github.com/Xiao-Fengqi'><span>[Github]</span></a><span> </span><a href='https://scholar.google.com/citations?user=rlyLiv8AAAAJ&amp;hl=en'><span>[Google Scholar]</span></a></p><p><span> </span><font face="Times New Roman" color=black size=3><span>Email: </span><a href='mailto:xiaofengqi@sz.tsinghua.edu.cn' target='_blank' class='url'>xiaofengqi@sz.tsinghua.edu.cn</a><span>; </span><a href='mailto:uacxiaofengqi@stu.xmu.edu.cn' target='_blank' class='url'>uacxiaofengqi@stu.xmu.edu.cn</a></font><span>   </span></p><hr /><p><img src="/Images/Xiamen baicheng-2.jpg" /><span> </span></p><center><font face="Comic Sans MS" color="black" size="4">Baicheng Sandy Beach,&nbsp;Xiamen</font></center><hr /><p><span>					</span><span>[</span><a href='#education'><span>Education</span></a><span>]  [</span><a href='#Research'><span>Research Interests</span></a><span>]   [</span><a href='#publications'><span>Publications</span></a><span>]   [</span><a href='#patents'><span>Patents</span></a><span>]   [</span><a href='#honors'><span>Honors and Awards</span></a><span>]   [</span><a href='#professional'><span>Professional Service</span></a><span>]</span></p><hr /><p><font face="Times New Roman" id="education" color=\#00008B size=4><span> ★</span><strong><span>News</span></strong></font><span> </span></p><ol start='' ><li>⭐️<font face="Times New Roman" color=black size=3><span>[2024.10] One paper has been accepted by </span><em><strong><span>IEEE Transactions on Geoscience and Remote Sensing (TGRS)</span></strong></em></font><span>.</span></li><li>⭐️<font face="Times New Roman" color=black size=3><span>[2024.10] One paper has been accepted by  </span><em><strong><span>IEEE Journal of Oceanic Engineering (JOE)</span></strong></em></font><span>.</span></li></ol><p>&nbsp;</p><hr /><p><font face="Times New Roman" id="education" color=\#00008B size=4><span> </span><strong><span>★Work Experience</span></strong><span> </span></font><span> </span></p><ul><li><font face="Times New Roman" color=black size=3><span>2024.08 - now，Postdoc，</span><strong><span>Tsinghua University</span></strong><span>，Shenzhen International Graduate School (SIGS), Institute for Ocean Engineering (iOE). </span><br><span> In cooperation with </span><a href='https://www.sigs.tsinghua.edu.cn/qjt/'><span>Juntian Qu</span></a><span>. </span></font></li></ul><p>&nbsp;</p><hr /><p><font face="Times New Roman" id="education" color=\#00008B size=4><span> </span><strong><span>★Education Experience</span></strong><span> </span></font><span> </span></p><ul><li><font face="Times New Roman" color=black size=3><span>2017.09 - 2024.06，PhD，</span><strong><span>Xiamen University</span></strong><span>，School of Information，</span><br><a href='https://uac.xmu.edu.cn/'><span>Key Laboratory of Underwater Acoustic Communication and Marine Information Technology, Ministry of Education, Xiamen University</span></a><span>. </span><br><span>Supervisor：</span><a href='https://informatics.xmu.edu.cn/info/1021/24599.htm'><span>En Cheng</span></a><span>，</span><a href='https://informatics.xmu.edu.cn/info/1021/24079.htm'><span>Fei Yuan</span></a><span>. </span></font></li><li><font face="Times New Roman" color=black size=3><span>2012.09 - 2016.06，B.S，</span><strong><span>Ocean University of China</span></strong><span>，School of Information Science and Technology.</span></font></li></ul><p>&nbsp;</p><hr /><p><font face="Times New Roman" id="Research" color=\#00008B size=4><span> </span><strong><span>★Research Interests</span></strong><span> </span></font><span> </span></p><ul><li><p><font face="Times New Roman" color=black size=3><span> </span><strong><span>Underwater intelligent information processing:</span></strong></font></p><ul><li><p><font face="Times New Roman" color=black size=3><span>Underwater optical image processing </span></font></p><ul><li><font face="Times New Roman" color=black size=3><span>Underwater image enhancement and restoration, underwater scene perception and understanding.</span></font></li></ul></li><li><p><font face="Times New Roman" color=black size=3><span>Sonar image processing</span></font></p><ul><li><font face="Times New Roman" color=black size=3><span>Sonar image despeckling, object detection, recognition and tracking</span></font><span>.</span></li></ul></li></ul></li></ul><p>&nbsp;</p><hr /><p><font face="Times New Roman" id="publications" color=\#00008B size=4><span> </span><strong><span>★Publications</span></strong><span> </span></font><span> </span></p><p><strong><font face="Times New Roman" color=black size=3><span> 2024</span></font></strong></p><ol start='' ><li><p><font face="Times New Roman" color=blue size=3><span>Neuromorphic Computing Network for Underwater Image Enhancement and Beyond.</span></font></p><ul><li><font face="Times New Roman" color=black size=3><span> </span><strong><span>Fengqi Xiao</span></strong><span>, Jiahui Liu, Yifan Huang, En Cheng, Fei Yuan*.</span></font></li><li><em><font face="Times New Roman" color=black size=3><u><strong><span>IEEE Transactions on Geoscience and Remote Sensing (TGRS),</span></strong></u><span> </span><strong><span>2024</span></strong><span>.</span></font></em></li></ul></li><li><p><font face="Times New Roman" color=blue size=3><span>Semi-supervised Underwater Image Enhancement Network Boosted by Depth Map Consistency.</span></font></p><ul><li><font face="Times New Roman" color=black size=3><span> </span><strong><span>Fengqi Xiao</span></strong><span>, Jiahui Liu, Yifan Huang, En Cheng, Fei Yuan*.</span></font></li><li><em><font face="Times New Roman" color=black size=3><u><strong><span>IEEE Journal of Oceanic Engineering (JOE), 2024</span></strong></u><span> </span></font></em></li></ul></li><li><p><font face="Times New Roman" color=blue size=3><span>Pseudo-analog Semantic Communication for Underwater Images Boosted by Depth Map Prior.</span></font></p><ul><li><font face="Times New Roman" color=black size=3><span>Jiahui Liu, </span><strong><span>Fengqi Xiao</span></strong><span>, Zhenyu Jia, En Cheng, Fei Yuan*.</span></font></li></ul><ul><li><font face="Times New Roman" color=black size=3><u><span>Submitted to IEEE IEEE Transactions on Circuits and Systems for Video Technology (TSCVT).</span></u><span> Under review.</span></font></li></ul></li><li><p><font face="Times New Roman" color=blue size=3><span>AO-Fusion: Underwater Image Object Detection Dataset and Method Based on Acousto-optic Multimodal Fusion. </span></font></p><ul><li><font face="Times New Roman" color=black size=3><span>Fengxue Yu, </span><strong><span>Fengqi Xiao</span></strong><span>, Fei Yuan*.</span></font></li></ul><ul><li><font face="Times New Roman" color=black size=3><u><span>Submitted to IEEE Journal of Oceanic Engineering (JOE).</span></u><span> Under review.</span></font></li></ul></li><li><p><font face="Times New Roman" color=blue size=3><span>LG-SOD:Underwater Object Detection for sonar images by  Integrating Local Feature and Global Semantic Memories</span></font></p><ul><li><font face="Times New Roman" color=black size=3><span>Fengxue Yu, Zhaozhi Wu, </span><strong><span>Fengqi Xiao</span></strong><span>, En Cheng, Fei Yuan*.</span></font></li><li><font face="Times New Roman" color=black size=3><u><span>Submitted to 2025 IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP).</span></u><span> Under review.</span></font></li></ul></li><li><p><font face="Times New Roman" color=blue size=3><span>Self-supervised Underwater Monocular Depth Estimation Informed by Image Restoration and Re-degradation</span></font></p><ul><li><font face="Times New Roman" color=black size=3><strong><span>Fengqi Xiao</span></strong><span>, Juntian Qu*.</span></font></li><li><font face="Times New Roman" color=black size=3><u><span>Submitted to 2025 IEEE International Conference on Robotics and Automation (ICRA).</span></u><span> Under review.</span></font></li></ul></li></ol><p><font face="Times New Roman" color=black size=3><span>  </span><strong><span>2023</span></strong></font></p><ol start='' ><li><p><font face="Times New Roman" color=blue size=3><span>Turbid Underwater Image Enhancement Based on Parameter-tuned Stochastic Resonance. </span><a href='https://ieeexplore.ieee.org/abstract/document/9880475'><span>[Paper]</span></a></font></p><ul><li><font face="Times New Roman" color=black size=3><strong><span>Fengqi Xiao</span></strong><span>, Fei Yuan*, Yifan Huang, En Cheng. </span></font></li></ul><ul><li><em><strong><font face="Times New Roman" color=black size=3><u><span>IEEE Journal of Oceanic Engineering (JOE)</span></u><span>, 2023. </span></font></strong></em></li></ul></li><li><p><font face="Times New Roman" color=blue size=3><span>Underwater Image Enhancement Based on Zero-Reference Deep Network. </span><a href='https://ieeexplore.ieee.org/abstract/document/10091685'><span>[Paper]</span></a><span> </span></font></p><ul><li><font face="Times New Roman" color=black size=3><span>Yifan Huang, Fei Yuan*, </span><strong><span>Fengqi Xiao</span></strong><span>, Jianxiang Lu, En Cheng. </span></font></li></ul><ul><li><font face="Times New Roman" color=black size=3><em><strong><u><span>IEEE Journal of Oceanic Engineering (JOE)</span></u></strong></em><span>, 2023. </span></font></li></ul></li><li><p><font face="Times New Roman" color=blue size=3><span>An Underwater Gas Leakage Measurement Method Based on Object Detection. </span><a href='https://ieeexplore.ieee.org/abstract/document/10400296'><span>[Paper]</span></a></font></p><ul><li><font face="Times New Roman" color=black size=3><span>Fengxue Yu, Qiang Tu, </span><strong><span>Fengqi Xiao</span></strong><span>, Fei Yuan, En Cheng*. </span></font></li></ul><ul><li><font face="Times New Roman" color=black size=3><strong><em><u><span>IEEE International Conference on Signal Processing, Communications and Computing (ICSPCC 2023)</span></u></em><span>,</span></strong><span> 2023. </span></font></li></ul></li></ol><p><font face="Times New Roman" color=black size=3><span>  </span><strong><span>2022</span></strong></font></p><ol start='' ><li><p><font face="Times New Roman" color=blue size=3><span>Underwater Image Enhancement Based on Color Restoration and Dual Image Wavelet Fusion. </span><a href='https://www.sciencedirect.com/science/article/pii/S0923596522001035'><span>[Paper]</span></a><span> </span></font></p><ul><li><font face="Times New Roman" color=black size=3><span>Yifan Huang, Fei Yuan*, </span><strong><span>Fengqi Xiao</span></strong><span>, En Cheng. </span></font></li></ul><ul><li><font face="Times New Roman" color=black size=3><em><strong><u><span>Signal Processing: Image Communication</span></u></strong></em><span> (SPIC), 2022. </span></font></li></ul></li></ol><p><font face="Times New Roman" color=black size=3><span>  </span><strong><span>2021</span></strong></font></p><ol start='' ><li><p><font face="Times New Roman" color=blue size=3><span>Noise Reduction for Sonar Images by Statistical Analysis and Fields of Experts. </span><a href='https://www.sciencedirect.com/science/article/pii/S104732032030211X'><span>[Paper]</span></a><span> </span></font></p><ul><li><font face="Times New Roman" color=black size=3><span>Fei Yuan, </span><strong><span>Fengqi Xiao</span></strong><span>, Kaihan Zhang, Yifan Huang, En Cheng*. </span></font></li></ul><ul><li><font face="Times New Roman" color=black size=3><em><strong><u><span>Journal of Visual Communication and Image Representation</span></u></strong></em><span> (JVCIR), 2021.</span></font></li></ul></li></ol><p><font face="Times New Roman" color=black size=3><span>  </span><strong><span>2020</span></strong></font></p><ol start='' ><li><p><font face="Times New Roman" color=blue size=3><span>Detection and Tracking Method of Maritime Moving Targets Based on Geosynchronous Orbit Satellite Optical Images.</span><a href='https://www.mdpi.com/2079-9292/9/7/1092'><span>[Paper]</span></a><span> </span></font></p><ul><li><font face="Times New Roman" color=black size=3><strong><span>Fengqi Xiao</span></strong><span>, Fei Yuan, En Cheng*. </span></font></li></ul><ul><li><font face="Times New Roman" color=black size=3><em><strong><u><span>Electronics</span></u></strong></em><span>, 2020.</span></font></li></ul></li><li><p><font face="Times New Roman" color=blUE size=3><span>Moving Ships Target Detection Algorithms for GAOFEN-4 Sequence Images. </span><a href='https://www.spiedigitallibrary.org/conference-proceedings-of-spie/11570/115700P/Moving-ships-target-detection-algorithms-for-GAOFEN-4-sequence-images/10.1117/12.2580045.short'><span>[Paper]</span></a><span> </span></font></p><ul><li><font face="Times New Roman" color=black size=3><span>Zhiwei Zhao*, </span><strong><span>Fengqi Xiao</span></strong><span>, Xianghao Kong, Jianquan Li, Jie Zang. </span></font></li></ul><ul><li><font face="Times New Roman" color=black size=3><strong><em><u><span>Applied Optics and Photonics China (AOPC 2020)</span></u></em><span>,</span></strong><span> 2020. </span></font></li></ul></li></ol><p>&nbsp;</p><hr /><p><font face="Times New Roman" id="patents" color=\#00008B size=4><span> </span><strong><span>★Patents</span></strong><span> </span></font><span> </span></p><ol start='' ><li><font face="微软雅黑" color=black size=3><strong><span>肖丰奇</span></strong><span>，卢健祥，袁飞，程恩。水下机器人智能控制方法、介质、设备及系统：中国，CN111080537B[P].</span></font></li></ol><p>&nbsp;</p><hr /><p><font face="Times New Roman" id="honors" color=\#00008B size=4><span> </span><strong><span>★Honors and Awards</span></strong><span> </span></font><span> </span></p><ol start='' ><li><p><strong><font face="微软雅黑" color=black size=3><span>第十四届“兆易创新杯”中国研究生电子设计竞赛，全国二等奖（2019）</span></font></strong></p><p><font color=black size=3><span>获奖作品：“观海”智能水下 ROV 系统</span></font></p></li><li><p><font  face="微软雅黑" color=black size=3><strong><span>第四届中国研究生移动终端应用设计创新大赛，全国二等奖（2018）</span></strong></font></p><p><font color=black size=3><span>获奖作品：在线实时监测与操控的光镊移动终端系统</span></font></p></li></ol><p>&nbsp;</p><hr /><p><font face="Times New Roman" id="professional" color=\#00008B size=4><span> </span><strong><span>★Professional Service</span></strong><span> </span></font><span> </span></p><ul><li><p><font face="Times New Roman" color=black size=3><span>Journal:</span></font></p><ul><li><font face="Times New Roman" color=black size=3><span>The reviewer of IEEE Journal on Selected Areas in Communications (JSAC).</span></font></li><li><font face="Times New Roman" color=black size=3><span>The reviewer of IEEE Journal of Oceanic Engineering (JOE).</span></font></li></ul></li><li><p><font face="Times New Roman" color=black size=3><span>Conference:</span></font></p><p>&nbsp;</p></li></ul><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><hr /><p><font face="Times New Roman" id="professional" color=\#00008B size=4><strong><span>My Album</span></strong></font><span> </span></p><p><img src="/Images/Xiamen University.jpg" /><span> </span></p><center><font face="Comic Sans MS" color="black" size="4">Xiamen University, 2023, 05</font></center><p><img src="/Images/dananmen.jpg" /><span> </span></p><center><font face="Comic Sans MS" color="black" size="4">Xiamen University, 2023, 06</font></center><p><img src="/Images/shuiping.jpg" /><span> </span></p><center><font face="Comic Sans MS" color="black" size="4">Aquarius, 2023, 12</font></center><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><hr /><p><font face="Times New Roman" id="professional" color=black size=4><span>Visitor Statistics:</span></font></p><script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=M-Rnztz2mrr0q4hNj7wftMkx1JDn2cQibvB_Sh78CXA&amp;cl=ffffff&amp;w=a"></script><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><div align="right"> <a href="#XFQ">[TOP↑]</a> </div><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p></div></div>
-</body>
-</html>
+ <img align="right" src="/Images/Xiao.jpeg"  style="zoom:45%;" /> 
+
+<font id="XFQ" face="楷体" color=black size=8>**肖丰奇**</font> 
+ <font id="XFQ" face="Times New Roman" color=black size=5>  Fengqi Xiao</font> 
+
+ <font face="宋体" color=black size=3>A Postdoc at Tsinghua Shenzhen International Graduate School</font>. 
+
+ [[Github]](https://github.com/Xiao-Fengqi) [[Google Scholar]](https://scholar.google.com/citations?user=rlyLiv8AAAAJ&hl=en)
+
+ <font face="Times New Roman" color=black size=3>Email: xiaofengqi@sz.tsinghua.edu.cn; uacxiaofengqi@stu.xmu.edu.cn</font>   
+
+------
+
+<img src="/Images/Xiamen baicheng-2.jpg" /> 
+
+<center><font face="Comic Sans MS" color=black size=4>Baicheng Sandy Beach, Xiamen</font>
+
+
+------
+
+
+​					[[Education](#education)]  [[Research Interests](#Research)]   [[Publications](#publications)]   [[Patents](#patents)]   [[Honors and Awards](#honors)]   [[Professional Service](#professional)]
+
+------
+
+<font face="Times New Roman" id="education" color=\#00008B size=4> ★**News**</font> 
+
+:star:<font face="Times New Roman" color=black size=3>[2025.07] One paper has been accepted by  ***IEEE Robotics and Automation Letters (RA-L)***</font>.
+
+:star:<font face="Times New Roman" color=black size=3>[2025.04] One paper has been accepted by  ***IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)***</font>.
+
+:star:<font face="Times New Roman" color=black size=3>[2025.01] One paper has been accepted by  ***IEEE Journal of Oceanic Engineering (JOE)***</font>.
+
+:star:<font face="Times New Roman" color=black size=3>[2024.10] One paper has been accepted by ***IEEE Transactions on Geoscience and Remote Sensing (TGRS)***</font>.
+
+:star:<font face="Times New Roman" color=black size=3>[2024.10] One paper has been accepted by  ***IEEE Journal of Oceanic Engineering (JOE)***</font>.
+
+:star:<font face="Times New Roman" color=black size=3>[2023.01] One paper has been accepted by  ***IEEE Journal of Oceanic Engineering (JOE)***</font>.
+
+------
+
+<font face="Times New Roman" id="education" color=\#00008B size=4> **★Work Experience** </font> 
+
+- <font face="Times New Roman" color=black size=3>2024.08 - now，Postdoc，**Tsinghua University**，Shenzhen International Graduate School (SIGS), Institute for Ocean Engineering (iOE). </font>
+
+  <font face="Times New Roman" color=black size=3>In cooperation with Prof. [Juntian Qu](https://www.sigs.tsinghua.edu.cn/qjt/). </font>
+
+------
+
+<font face="Times New Roman" id="education" color=\#00008B size=4> **★Education Experience** </font> 
+
+* <font face="Times New Roman" color=black size=3>2017.09 - 2024.06，PhD，**Xiamen University**，School of Information，<br />[Key Laboratory of Underwater Acoustic Communication and Marine Information Technology, Ministry of Education, Xiamen University](https://uac.xmu.edu.cn/). Supervisor：Prof. [En Cheng](https://informatics.xmu.edu.cn/info/1021/24599.htm)，Prof. [Fei Yuan](https://informatics.xmu.edu.cn/info/1021/24079.htm). </font>
+* <font face="Times New Roman" color=black size=3>2012.09 - 2016.06，B.S，**Ocean University of China**，School of Information Science and Technology.</font>
+
+------
+
+<font face="Times New Roman" id="Research" color=\#00008B size=4> **★Research Interests** </font> 
+
+- <font face="Times New Roman" color=black size=3> **Underwater intelligent information processing:**</font>
+  - <font face="Times New Roman" color=black size=3>Underwater optical image processing </font>
+    - <font face="Times New Roman" color=black size=3>Underwater image enhancement and restoration, underwater scene perception and understanding.</font>
+  - <font face="Times New Roman" color=black size=3>Sonar image processing</font>
+    - <font face="Times New Roman" color=black size=3>Sonar image despeckling, object detection, recognition and tracking</font>.
+
+------
+
+<font face="Times New Roman" id="publications" color=\#00008B size=4> **★Publications** </font> 
+
+ **<font face="Times New Roman" color=black size=3>2025</font>**
+
+1. <font face="Times New Roman" color=blue size=3>Self-supervised Underwater Monocular Depth Estimation Informed byMulti-physics Processes.</font>
+
+   - <font face="Times New Roman" color=black size=3>**Fengqi Xiao**, Juntian Qu*.</font>
+   - <font face="Times New Roman" color=black size=3><u>***IEEE Robotics and Automation Letters(RA-L)***.</u> </font>
+
+2. <font face="Times New Roman" color=blue size=3>BRIUIE: A Bio-Retina Inspired Underwater Image Enhancement Framework.  </font> 
+
+   - <font face="Times New Roman" color=black size=3>Congcong Li, Xinze Zheng, **Fengqi Xiao**, Fei Yuan</font>  
+   - <font face="Times New Roman" color=black size=3>***<u>IEEE Transactions on Circuits and Systems for Video Technology (TSCVT), 2025</u>***</font>
+
+3. <font face="Times New Roman" color=blue size=3>AO-UOD: A Novel Paradigm for Underwater Object Detection Using Acousto-Optic Fusion. </font>
+
+   -  <font face="Times New Roman" color=black size=3>Fengxue Yu, **Fengqi Xiao**, Congcong Li, En Cheng, Fei Yuan*.</font>
+
+
+      -  <font face="Times New Roman" color=black size=3><u>***IEEE Journal of Oceanic Engineering (JOE), 2025***.</u> </font>
+
+4. <font face="Times New Roman" color=blue size=3>Pseudo-analog Semantic Communication for Underwater Images Boosted by Depth Map Prior.</font>
+
+   -  <font face="Times New Roman" color=black size=3>Jiahui Liu, **Fengqi Xiao**, Zhenyu Jia, En Cheng, Fei Yuan*.</font>
+
+
+      -  <font face="Times New Roman" color=black size=3><u>Submitted to IEEE Transactions on Circuits and Systems for Video Technology (TCSVT).</u> Under review.</font>
+
+5. <font face="Times New Roman" color=blue size=3>LG-SOD:Underwater Object Detection for sonar images by  Integrating Local Feature and Global Semantic Memories.</font>
+
+   - <font face="Times New Roman" color=black size=3>Fengxue Yu, Zhaozhi Wu, **Fengqi Xiao**, En Cheng, Fei Yuan*.</font>
+   - <font face="Times New Roman" color=black size=3><u>Submitted to 2025 IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP).</u> Under review.</font>
+
+6. <font face="Times New Roman" color=blue size=3>An Intelligent Bionic Amphibious Turtle Robot with Visual-Tactile Fusion for Dynamic Terrain Adaptation.</font>
+
+   - <font face="Times New Roman" color=black size=3>Ang liu, Xianrui Zhang, Haozhi Huang, **Fengqi Xiao**, Guangming Cui,baijin mao, Yining Xu, Zhuang Zhang, Juntian Qu*.</font>
+   - <font face="Times New Roman" color=black size=3><u>Submitted to IEEE Transactions on Robotics  (TRO).</u> Under review.</font>
+
+**<font face="Times New Roman" color=black size=3> 2024</font>**
+
+1. <font face="Times New Roman" color=blue size=3>Neuromorphic Computing Network for Underwater Image Enhancement and Beyond. [[Paper]](https://ieeexplore.ieee.org/abstract/document/10704737)</font>
+   - <font face="Times New Roman" color=black size=3> **Fengqi Xiao**, Jiahui Liu, Yifan Huang, En Cheng, Fei Yuan*.</font>
+
+   - *<font face="Times New Roman" color=black size=3><u>**IEEE Transactions on Geoscience and Remote Sensing (TGRS),**</u> **2024**.</font>*
+2. <font face="Times New Roman" color=blue size=3>Semi-supervised Underwater Image Enhancement Network Boosted by Depth Map Consistency.</font>
+   - <font face="Times New Roman" color=black size=3> **Fengqi Xiao**, Jiahui Liu, Yifan Huang, En Cheng, Fei Yuan*.</font>
+   - *<font face="Times New Roman" color=black size=3><u>**IEEE Journal of Oceanic Engineering (JOE), 2024**</u> </font>*
+
+<font face="Times New Roman" color=black size=3>  **2023**</font>
+
+1. <font face="Times New Roman" color=blue size=3>Turbid Underwater Image Enhancement Based on Parameter-tuned Stochastic Resonance. [[Paper]](https://ieeexplore.ieee.org/abstract/document/9880475)</font>
+
+   -  <font face="Times New Roman" color=black size=3>**Fengqi Xiao**, Fei Yuan*, Yifan Huang, En Cheng. </font>
+
+
+      -  ***<font face="Times New Roman" color=black size=3><u>IEEE Journal of Oceanic Engineering (JOE)</u>, 2023. </font>***
+
+2. <font face="Times New Roman" color=blue size=3>Underwater Image Enhancement Based on Zero-Reference Deep Network. [[Paper]](https://ieeexplore.ieee.org/abstract/document/10091685) </font>
+
+   -  <font face="Times New Roman" color=black size=3>Yifan Huang, Fei Yuan*, **Fengqi Xiao**, Jianxiang Lu, En Cheng. </font>
+
+
+      -  <font face="Times New Roman" color=black size=3>***<u>IEEE Journal of Oceanic Engineering (JOE)</u>***, 2023. </font>
+
+3. <font face="Times New Roman" color=blue size=3>An Underwater Gas Leakage Measurement Method Based on Object Detection. [[Paper]](https://ieeexplore.ieee.org/abstract/document/10400296)</font>
+
+   -  <font face="Times New Roman" color=black size=3>Fengxue Yu, Qiang Tu, **Fengqi Xiao**, Fei Yuan, En Cheng*. </font>
+
+
+   -  <font face="Times New Roman" color=black size=3>***<u>IEEE International Conference on Signal Processing, Communications and Computing (ICSPCC 2023)</u>*,** 2023. </font>
+
+<font face="Times New Roman" color=black size=3>  **2022**</font>
+
+1. <font face="Times New Roman" color=blue size=3>Underwater Image Enhancement Based on Color Restoration and Dual Image Wavelet Fusion. [[Paper]](https://www.sciencedirect.com/science/article/pii/S0923596522001035) </font>
+
+   -  <font face="Times New Roman" color=black size=3>Yifan Huang, Fei Yuan*, **Fengqi Xiao**, En Cheng. </font>
+
+
+   -  <font face="Times New Roman" color=black size=3>***<u>Signal Processing: Image Communication</u>*** (SPIC), 2022. </font>
+
+<font face="Times New Roman" color=black size=3>  **2021**</font>
+
+1. <font face="Times New Roman" color=blue size=3>Noise Reduction for Sonar Images by Statistical Analysis and Fields of Experts. [[Paper]](https://www.sciencedirect.com/science/article/pii/S104732032030211X) </font>
+
+   -  <font face="Times New Roman" color=black size=3>Fei Yuan, **Fengqi Xiao**, Kaihan Zhang, Yifan Huang, En Cheng*. </font>
+
+
+   -  <font face="Times New Roman" color=black size=3>***<u>Journal of Visual Communication and Image Representation</u>*** (JVCIR), 2021.</font>
+
+<font face="Times New Roman" color=black size=3>  **2020**</font>
+
+1. <font face="Times New Roman" color=blue size=3>Detection and Tracking Method of Maritime Moving Targets Based on Geosynchronous Orbit Satellite Optical Images.[[Paper]](https://www.mdpi.com/2079-9292/9/7/1092) </font>
+
+   -  <font face="Times New Roman" color=black size=3>**Fengqi Xiao**, Fei Yuan, En Cheng*. </font>
+
+
+      -  <font face="Times New Roman" color=black size=3>***<u>Electronics</u>***, 2020.</font>
+
+2. <font face="Times New Roman" color=blUE size=3>Moving Ships Target Detection Algorithms for GAOFEN-4 Sequence Images. [[Paper]](https://www.spiedigitallibrary.org/conference-proceedings-of-spie/11570/115700P/Moving-ships-target-detection-algorithms-for-GAOFEN-4-sequence-images/10.1117/12.2580045.short) </font>
+
+   -  <font face="Times New Roman" color=black size=3>Zhiwei Zhao*, **Fengqi Xiao**, Xianghao Kong, Jianquan Li, Jie Zang. </font>
+
+
+   -  <font face="Times New Roman" color=black size=3>***<u>Applied Optics and Photonics China (AOPC 2020)</u>*,** 2020. </font>
+
+
+
+------
+
+<font face="Times New Roman" id="patents" color=\#00008B size=4> **★Patents** </font> 
+
+1. <font face="微软雅黑" color=black size=3>**肖丰奇**，卢健祥，袁飞，程恩。水下机器人智能控制方法、介质、设备及系统：中国，CN111080537B[P].</font>
+1. <font face="微软雅黑" color=black size=3>段梦兰，李彬彬，郭宇韬，陈谦，王恩浩，曲钧天，李宜鸿，**肖丰奇**，康荣臻。一种深远海水下悬浮储油储液装置：中国，[P].</font>
+
+
+
+------
+
+<font face="Times New Roman" id="honors" color=\#00008B size=4> **★Honors and Awards** </font> 
+
+1. **<font face="微软雅黑" color=black size=3>第十四届“兆易创新杯”中国研究生电子设计竞赛，全国二等奖（2019）</font>**
+
+   <font color=black size=3>获奖作品：“观海”智能水下 ROV 系统</font>
+
+2. <font  face="微软雅黑" color=black size=3>**第四届中国研究生移动终端应用设计创新大赛，全国二等奖（2018）**</font>
+
+   <font color=black size=3>获奖作品：在线实时监测与操控的光镊移动终端系统</font>
+
+
+
+
+------
+
+<font face="Times New Roman" id="professional" color=\#00008B size=4> **★Professional Service** </font> 
+
+- <font face="Times New Roman" color=black size=3>The Reviewer of Journals:</font>
+
+  - <font face="Times New Roman" color=black size=3> **IEEE Journal on Selected Areas in Communications (JSAC)**.</font>
+  - <font face="Times New Roman" color=black size=3> **IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)**.</font>
+  - <font face="Times New Roman" color=black size=3>**IEEE Journal of Oceanic Engineering (JOE)**.</font>
+  - <font face="Times New Roman" color=black size=3>**IEEE Signal Processing Letters (SPL)**.</font>
+  - <font face="Times New Roman" color=black size=3>**International Journal of Robotics Research (IJRR)**.</font>
+  - <font face="Times New Roman" color=black size=3>**Signal, Image and Video Processing**.</font>
+  - <font face="Times New Roman" color=black size=3>**Sensors**.</font>
+
+- <font face="Times New Roman" color=black size=3>The Reviewer of Conferences:</font>
+
+  - <font face="Times New Roman" color=black size=3>**The IEEE International Conference on Automation Science and Engineering (CASE)**.</font>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------
+
+<font face="Times New Roman" id="professional" color=\#00008B size=4>**My Album**</font> 
+
+<img src="/Images/Xiamen University.jpg" /> 
+
+<center><font face="Comic Sans MS" color=black size=4>Xiamen University, 2023, 05</font>
+
+
+<img src="/Images/dananmen.jpg" /> 
+
+<center><font face="Comic Sans MS" color=black size=4>Xiamen University, 2023, 06</font>
+
+
+<img src="/Images/shuiping.jpg" /> 
+
+<center><font face="Comic Sans MS" color=black size=4>Aquarius, 2023, 12</font>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------
+
+<font face="Times New Roman" id="professional" color=black size=4>Visitor Statistics:</font>
+
+<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=M-Rnztz2mrr0q4hNj7wftMkx1JDn2cQibvB_Sh78CXA&cl=ffffff&w=a"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div align= right > <a href= #XFQ>[TOP↑]</a > </div>
+
+
+
+
+
+
+
