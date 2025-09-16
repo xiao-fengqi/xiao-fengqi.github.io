@@ -2,7 +2,7 @@
 layout: archive
 title: "CV"
 permalink: /cv/
-author_profile: true
+author_profile: false
 redirect_from:
   - /resume
 ---
@@ -12,7 +12,7 @@ redirect_from:
 
  <img align="right" src="/Images/Xiao.jpeg"  style="zoom:45%;" /> 
 
-<font id="XFQ" face="楷体" color=black size=8>**肖丰奇**</font> 
+ <font id="XFQ" face="楷体" color=black size=8>**肖丰奇**</font> 
  <font id="XFQ" face="Times New Roman" color=black size=5>  Fengqi Xiao</font> 
 
  <font face="宋体" color=black size=3>A Postdoc at Tsinghua Shenzhen International Graduate School</font>. 
