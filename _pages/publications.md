@@ -13,6 +13,7 @@ author_profile: true
 
 <!-- New style rendering if publication categories are defined -->
 
+---
 
 :pushpin:<font face="Times New Roman" color=black size=3> # and * mark the author and corresponding author respectively </font>
 
@@ -122,6 +123,7 @@ author_profile: true
 1. <font face="微软雅黑" color=black size=3>肖丰奇#，卢健祥，袁飞，程恩。水下机器人智能控制方法、介质、设备及系统：中国，CN111080537B[P].</font>
 
 1. <font face="微软雅黑" color=black size=3>段梦兰，李彬彬，郭宇韬，陈谦，王恩浩，曲钧天，李宜鸿，肖丰奇#，康荣臻。一种深远海水下悬浮储油储液装置：中国，[P].</font>
+
 
 
 
