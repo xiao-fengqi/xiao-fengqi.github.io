@@ -14,19 +14,19 @@ redirect_from:
 News
 ======
 
-:star:<font face="Times New Roman" color=black size=3>[2025.07] One paper has been accepted by IEEE Transactions on Robotics </font>.
+:fire:<font face="Times New Roman" color=black size=3>[2025.07] One paper has been accepted by IEEE Transactions on Robotics </font>.
 
-:star:<font face="Times New Roman" color=black size=3>[2025.07] One paper has been accepted by IEEE Robotics and Automation Letters </font>.
+:fire:<font face="Times New Roman" color=black size=3>[2025.07] One paper has been accepted by IEEE Robotics and Automation Letters </font>.
 
-:star:<font face="Times New Roman" color=black size=3>[2025.04] One paper has been accepted by IEEE Transactions on Circuits and Systems for Video Technology </font>.
+:fire:<font face="Times New Roman" color=black size=3>[2025.04] One paper has been accepted by IEEE Transactions on Circuits and Systems for Video Technology </font>.
 
-:star:<font face="Times New Roman" color=black size=3>[2025.01] One paper has been accepted by IEEE Journal of Oceanic Engineering </font>.
+:fire:<font face="Times New Roman" color=black size=3>[2025.01] One paper has been accepted by IEEE Journal of Oceanic Engineering </font>.
 
-:star:<font face="Times New Roman" color=black size=3>[2024.10] One paper has been accepted by IEEE Transactions on Geoscience and Remote Sensing </font>.
+:fire:<font face="Times New Roman" color=black size=3>[2024.10] One paper has been accepted by IEEE Transactions on Geoscience and Remote Sensing </font>.
 
-:star:<font face="Times New Roman" color=black size=3>[2024.10] One paper has been accepted by IEEE Journal of Oceanic Engineering </font>.
+:fire:<font face="Times New Roman" color=black size=3>[2024.10] One paper has been accepted by IEEE Journal of Oceanic Engineering </font>.
 
-:star:<font face="Times New Roman" color=black size=3>[2023.01] One paper has been accepted by IEEE Journal of Oceanic Engineering </font>.
+:fire:<font face="Times New Roman" color=black size=3>[2023.01] One paper has been accepted by IEEE Journal of Oceanic Engineering </font>.
 
 ------
 
