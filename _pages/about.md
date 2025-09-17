@@ -11,6 +11,7 @@ redirect_from:
 
 <img src="https://github.com/xiao-fengqi/xiao-fengqi.github.io/blob/master/images/Xiamen%20baicheng-2.jpg" /> 
 
+
 ------
 
 News
