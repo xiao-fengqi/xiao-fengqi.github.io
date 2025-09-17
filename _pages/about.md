@@ -11,7 +11,7 @@ redirect_from:
 
 <img src="https://github.com/xiao-fengqi/xiao-fengqi.github.io/blob/master/images/Xiamen%20baicheng-2.jpg" /> 
 
-<font face="Times New Roman" color=black size=3>Baicheng Sandy Beach, Xiamen</font>
+
 
 ------
 
