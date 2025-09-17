@@ -60,11 +60,11 @@ author_profile: true
 1. <font face="Times New Roman" color=blue size=3>Neuromorphic Computing Network for Underwater Image Enhancement and Beyond. [[Paper]](https://ieeexplore.ieee.org/abstract/document/10704737)</font>
    - <font face="Times New Roman" color=black size=3> Fengqi Xiao#, Jiahui Liu, Yifan Huang, En Cheng, Fei Yuan*.</font>
 
-   - *<font face="Times New Roman" color=black size=3><u>IEEE Transactions on Geoscience and Remote Sensing (TGRS),</u> 2024.</font>*
+   - <font face="Times New Roman" color=black size=3><u>IEEE Transactions on Geoscience and Remote Sensing (TGRS),</u> 2024.</font>
      
 2. <font face="Times New Roman" color=blue size=3>Semi-supervised Underwater Image Enhancement Network Boosted by Depth Map Consistency.</font>
    - <font face="Times New Roman" color=black size=3> Fengqi Xiao#, Jiahui Liu, Yifan Huang, En Cheng, Fei Yuan*.</font>
-   - *<font face="Times New Roman" color=black size=3><u>IEEE Journal of Oceanic Engineering (JOE), 2024</u> </font>*
+   - <font face="Times New Roman" color=black size=3><u>IEEE Journal of Oceanic Engineering (JOE), 2024</u> </font>
 
 **<font face="Times New Roman" color=black size=3>2023</font>**
 
@@ -123,6 +123,7 @@ author_profile: true
 1. <font face="微软雅黑" color=black size=3>肖丰奇#，卢健祥，袁飞，程恩。水下机器人智能控制方法、介质、设备及系统：中国，CN111080537B[P].</font>
 
 1. <font face="微软雅黑" color=black size=3>段梦兰，李彬彬，郭宇韬，陈谦，王恩浩，曲钧天，李宜鸿，肖丰奇#，康荣臻。一种深远海水下悬浮储油储液装置：中国，[P].</font>
+
 
 
 
