@@ -14,13 +14,16 @@ redirect_from:
 
 - <font face="Times New Roman" color=black size=3>2024.08 - now，Postdoc，Tsinghua University，Shenzhen International Graduate School (SIGS), Institute for Ocean Engineering (iOE). </font>
 
-  In cooperation with Prof. [Juntian Qu](https://www.sigs.tsinghua.edu.cn/qjt/). 
+  <br /><font face="Times New Roman" color=black size=3>In cooperation with Prof. Juntian Qu. </font>
 
 ------
 
 **<font face="Times New Roman" id="education" color=black size=4>Education Experience </font>**
 
-* <font face="Times New Roman" color=black size=3>2017.09 - 2024.06，PhD，Xiamen University，School of Information，<br />[Key Laboratory of Underwater Acoustic Communication and Marine Information Technology, Ministry of Education, Xiamen University](https://uac.xmu.edu.cn/). Supervisor：Prof. [En Cheng](https://informatics.xmu.edu.cn/info/1021/24599.htm)，Prof. [Fei Yuan](https://informatics.xmu.edu.cn/info/1021/24079.htm). </font>
+* <font face="Times New Roman" color=black size=3>2017.09 - 2024.06，PhD，Xiamen University，School of Information，
+  <br />Key Laboratory of Underwater Acoustic Communication and Marine Information Technology, Ministry of Education, Xiamen University.
+  <br />Supervisor：Prof. En Cheng，Prof. Fei Yuan. </font>
+  
 * <font face="Times New Roman" color=black size=3>2012.09 - 2016.06，B.S，Ocean University of China，School of Information Science and Technology.</font>
 
 ------
