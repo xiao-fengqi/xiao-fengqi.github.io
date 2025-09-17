@@ -12,8 +12,8 @@ redirect_from:
 
 **<font face="Times New Roman" id="education" color=black size=4>Work Experience </font>**
 
-- <font face="Times New Roman" color=black size=3>2024.08 - now，Postdoc，Tsinghua University，Shenzhen International Graduate School (SIGS), Institute for Ocean Engineering (iOE). </font>
-  <br /><font face="Times New Roman" color=black size=3>In cooperation with Prof. Juntian Qu. </font>
+- <font face="Times New Roman" color=black size=3>2024.08 - now，Postdoc，Tsinghua University，Shenzhen International Graduate School (SIGS), Institute for Ocean Engineering (iOE). 
+  <br />In cooperation with Prof. Juntian Qu. </font>
 
 ------
 
