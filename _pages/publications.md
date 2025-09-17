@@ -57,7 +57,7 @@ author_profile: true
 
  **<font face="Times New Roman" color=black size=3> 2024</font>**
 
-1. <font face="Times New Roman" color=blue size=3>Neuromorphic Computing Network for Underwater Image Enhancement and Beyond. [[Paper]](https://ieeexplore.ieee.org/abstract/document/10704737)</font>
+1. <font face="Times New Roman" color=blue size=3>Neuromorphic Computing Network for Underwater Image Enhancement and Beyond. </font>
    - <font face="Times New Roman" color=black size=3> Fengqi Xiao#, Jiahui Liu, Yifan Huang, En Cheng, Fei Yuan*.</font>
 
    - <font face="Times New Roman" color=black size=3><u>IEEE Transactions on Geoscience and Remote Sensing (TGRS),</u> 2024.</font>
@@ -68,19 +68,19 @@ author_profile: true
 
 **<font face="Times New Roman" color=black size=3>2023</font>**
 
-1. <font face="Times New Roman" color=blue size=3>Turbid Underwater Image Enhancement Based on Parameter-tuned Stochastic Resonance. [[Paper]](https://ieeexplore.ieee.org/abstract/document/9880475)</font>
+1. <font face="Times New Roman" color=blue size=3>Turbid Underwater Image Enhancement Based on Parameter-tuned Stochastic Resonance. </font>
 
    -  <font face="Times New Roman" color=black size=3>Fengqi Xiao#, Fei Yuan*, Yifan Huang, En Cheng. </font>
 
    -  <font face="Times New Roman" color=black size=3><u>IEEE Journal of Oceanic Engineering (JOE)</u>, 2023. </font>
 
-2. <font face="Times New Roman" color=blue size=3>Underwater Image Enhancement Based on Zero-Reference Deep Network. [[Paper]](https://ieeexplore.ieee.org/abstract/document/10091685) </font>
+2. <font face="Times New Roman" color=blue size=3>Underwater Image Enhancement Based on Zero-Reference Deep Network.  </font>
 
    -  <font face="Times New Roman" color=black size=3>Yifan Huang, Fei Yuan*, Fengqi Xiao#, Jianxiang Lu, En Cheng. </font>
 
    -  <font face="Times New Roman" color=black size=3><u>IEEE Journal of Oceanic Engineering (JOE)</u>, 2023. </font>
 
-3. <font face="Times New Roman" color=blue size=3>An Underwater Gas Leakage Measurement Method Based on Object Detection. [[Paper]](https://ieeexplore.ieee.org/abstract/document/10400296)</font>
+3. <font face="Times New Roman" color=blue size=3>An Underwater Gas Leakage Measurement Method Based on Object Detection. </font>
 
    -  <font face="Times New Roman" color=black size=3>Fengxue Yu, Qiang Tu, Fengqi Xiao#, Fei Yuan, En Cheng*. </font>
 
@@ -88,7 +88,7 @@ author_profile: true
 
 **<font face="Times New Roman" color=black size=3>2022</font>**
 
-1. <font face="Times New Roman" color=blue size=3>Underwater Image Enhancement Based on Color Restoration and Dual Image Wavelet Fusion. [[Paper]](https://www.sciencedirect.com/science/article/pii/S0923596522001035) </font>
+1. <font face="Times New Roman" color=blue size=3>Underwater Image Enhancement Based on Color Restoration and Dual Image Wavelet Fusion. </font>
 
    -  <font face="Times New Roman" color=black size=3>Yifan Huang, Fei Yuan*, Fengqi Xiao#, En Cheng. </font>
 
@@ -96,7 +96,7 @@ author_profile: true
 
 **<font face="Times New Roman" color=black size=3>2021</font>**
 
-1. <font face="Times New Roman" color=blue size=3>Noise Reduction for Sonar Images by Statistical Analysis and Fields of Experts. [[Paper]](https://www.sciencedirect.com/science/article/pii/S104732032030211X) </font>
+1. <font face="Times New Roman" color=blue size=3>Noise Reduction for Sonar Images by Statistical Analysis and Fields of Experts. </font>
 
    -  <font face="Times New Roman" color=black size=3>Fei Yuan, Fengqi Xiao#, Kaihan Zhang, Yifan Huang, En Cheng*. </font>
 
@@ -104,13 +104,13 @@ author_profile: true
 
 **<font face="Times New Roman" color=black size=3>2020</font>**
 
-1. <font face="Times New Roman" color=blue size=3>Detection and Tracking Method of Maritime Moving Targets Based on Geosynchronous Orbit Satellite Optical Images.[[Paper]](https://www.mdpi.com/2079-9292/9/7/1092) </font>
+1. <font face="Times New Roman" color=blue size=3>Detection and Tracking Method of Maritime Moving Targets Based on Geosynchronous Orbit Satellite Optical Images. </font>
 
    -  <font face="Times New Roman" color=black size=3>Fengqi Xiao#, Fei Yuan, En Cheng*. </font>
 
    -  <font face="Times New Roman" color=black size=3><u>Electronics</u>, 2020.</font>
 
-3. <font face="Times New Roman" color=blUE size=3>Moving Ships Target Detection Algorithms for GAOFEN-4 Sequence Images. [[Paper]](https://www.spiedigitallibrary.org/conference-proceedings-of-spie/11570/115700P/Moving-ships-target-detection-algorithms-for-GAOFEN-4-sequence-images/10.1117/12.2580045.short) </font>
+3. <font face="Times New Roman" color=blUE size=3>Moving Ships Target Detection Algorithms for GAOFEN-4 Sequence Images. </font>
 
    -  <font face="Times New Roman" color=black size=3>Zhiwei Zhao*, Fengqi Xiao#, Xianghao Kong, Jianquan Li, Jie Zang. </font>
 
@@ -123,6 +123,7 @@ author_profile: true
 1. <font face="微软雅黑" color=black size=3>肖丰奇#，卢健祥，袁飞，程恩。水下机器人智能控制方法、介质、设备及系统：中国，CN111080537B[P].</font>
 
 1. <font face="微软雅黑" color=black size=3>段梦兰，李彬彬，郭宇韬，陈谦，王恩浩，曲钧天，李宜鸿，肖丰奇#，康荣臻。一种深远海水下悬浮储油储液装置：中国，[P].</font>
+
 
 
 
