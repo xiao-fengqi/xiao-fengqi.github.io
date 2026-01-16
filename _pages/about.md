@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-<font face="Times New Roman" id="education" color=black size=4>I am currently a postdoctoral researcher at the Tsinghua University Shenzhen International Graduate School, focusing on underwater information perception and processing, and underwater intelligent robotics. I received my Ph.D. in Information and Communications Engineering from the School of Information at Xiamen University, where my advisors were Professors Cheng En and Yuan Fei. I also received my B.A. in Electronic Science and Technology from the Ocean University of China. </font>
+<font face="Times New Roman" id="education" color=black size=4>I am currently a postdoctoral researcher at the Tsinghua University SIGS-iOE, focusing on underwater information perception and processing, and underwater intelligent robotics. I received my Ph.D. in Information and Communications Engineering from the School of Information at Xiamen University, where my advisors were Professors Cheng En and Yuan Fei. I also received my B.A. in Electronic Science and Technology from the Ocean University of China. </font>
 
 
 ![Xiamen-baicheng-2](https://github.com/user-attachments/assets/0638d7e6-391f-41e4-b538-3d96a8336b94)
